@@ -1,0 +1,37 @@
+{
+  "name": "grunt-conditional-deploy",
+  "description": "A plugin to conditionally run tasks based on files on the last commit",
+  "version": "0.1.0",
+  "homepage": "https://github.com/matiasdecarli/grunt-conditional-deploy",
+  "author": {
+    "name": "Matias De Carli",
+    "email": "matiasdecarli@gmail.com",
+    "url": "http://matiasdecarli.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matiasdecarli/grunt-conditional-deploy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matiasdecarli/grunt-conditional-deploy/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/matiasdecarli/grunt-conditional-deploy/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "async": "^1.5.2",
+    "lodash": "^4.6.1"
+  }
+}
