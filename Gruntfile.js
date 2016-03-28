@@ -15,7 +15,8 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     'conditional_deploy': {
       options:{
-        separator: '\n'
+        separator: '\n',
+        commit: 'HEAD~1'  //target everything after this commit
       },
       frontend:{
         options:{

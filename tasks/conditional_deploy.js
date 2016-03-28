@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         var i = 0;
     var commit = grunt.util.spawn({
             cmd: "git",
-			args: ['diff', '--name-only', 'HEAD~1'],
+			args: ['diff', '--name-only', obj.options().commit],
         }, function(error, result, code) {
         	if (error) grunt.fail.fatal(error);
 
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 
     function runTask(taskName){
     	grunt.task.run(taskName);
-    	console.log('should run: ', taskName);
+    	console.log('fired task: ', taskName);
     }
 
   grunt.registerMultiTask('conditional_deploy', 'A plugin to conditionally run tasks based on files on the last commit', function() {
