@@ -25,17 +25,17 @@ module.exports = function(grunt) {
         }, function(error, result, code) {
         	if (error) grunt.fail.fatal(error);
 
-        	var files = result.stdout.split(obj.options().separator);
+            var files = result.stdout.split(obj.options().separator);
 
-    		if (_.intersection(obj.filesSrc,files).length!==0) runTask(obj.data.options.target);
+            if (_.intersection(obj.filesSrc,files).length!==0) runTask(obj.data.options.target, files);
 
             donePromise();
         });
     };
 
-    function runTask(taskName){
+    function runTask(taskName, filesChanged){
     	grunt.task.run(taskName);
-    	console.log('fired task: ', taskName);
+        console.log('fired task: ', taskName, ' . files changed: ', filesChanged);
     }
 
   grunt.registerMultiTask('conditional_deploy', 'A plugin to conditionally run tasks based on files on the last commit', function() {
