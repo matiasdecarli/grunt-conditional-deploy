@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         var i = 0;
     var commit = grunt.util.spawn({
             cmd: "git",
-			args: ['diff', '--name-only', obj.options().commit],
+			args: _.compact(['diff', '--name-only', obj.options().commit_from, obj.options().commit_to]),
         }, function(error, result, code) {
         	if (error) grunt.fail.fatal(error);
 

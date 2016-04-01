@@ -1,7 +1,7 @@
 {
   "name": "grunt-conditional-deploy",
   "description": "A plugin to conditionally run tasks based on files on the last commit",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/matiasdecarli/grunt-conditional-deploy",
   "author": {
     "name": "Matias De Carli",

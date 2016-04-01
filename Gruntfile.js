@@ -16,7 +16,8 @@ module.exports = function(grunt) {
     'conditional_deploy': {
       options:{
         separator: '\n',
-        commit: 'HEAD~1'  //target everything after this commit
+        commit_from: 'HEAD~3',  //target everything after this commit
+        commit_to: 'HEAD~1'     //target everything until this commit
       },
       frontend:{
         options:{
